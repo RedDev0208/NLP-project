@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="container">
+
+            <h1 class="page-title text-center">Hugging Face AI Model</h1>
+
+            <div class="option">
+                <button id="open">Open File</button>
+                <button id="download">Download</button>
+                <button id="run">Summarize</button>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <h2 class="title">Original Text</h2>
+                    <textarea id="text" rows="10" cols="50" name="text"></textarea>
+                </div>
+                <div class="col-xs-6">
+                    <h2 class="title">Summarized Text</h2>
+                    <textarea id="summary" rows="10" cols="50" name="summary">{{ summary }}</textarea>
+                </div>
+            </div>
+
+            <div class="progress-bar__container">
+                <div class="progress-bar">
+                    <span class="progress-bar__text">Uploaded Successfully!</span>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+        <script src="{{ url_for('static', filename='js/template.js') }}"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
